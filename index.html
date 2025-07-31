@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy National GF Day ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: radial-gradient(circle at top left, #ffe4e1, #fff0f5);
+      overflow-x: hidden;
+      text-align: center;
+      position: relative;
+    }
+
+    .main-container {
+      max-width: 800px;
+      margin: 10vh auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 25px;
+      padding: 3rem 2rem;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Sacramento', cursive;
+      font-size: 3.5rem;
+      color: #d81b60;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #4a148c;
+      margin-bottom: 1rem;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .btn {
+      background-color: #d81b60;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #ad1457;
+      transform: scale(1.05);
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: #ff5ca2;
+      transform: rotate(45deg);
+      animation: floatUp 8s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff5ca2;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .main-container {
+        padding: 2rem 1.5rem;
+        margin: 5vh 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts"></div>
+  <div class="main-container">
+    <h1>Happy National Girlfriend Day 💖</h1>
+    <p>To the most beautiful soul I've ever known...</p>
+    <p>This is something small, from my heart to yours.</p>
+    <button class="btn" onclick="window.location.href='index.html'">Click to Open Your Surprise 🎁</button>
+  </div>
+
+  <script>
+    const heartsContainer = document.querySelector('.hearts');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>

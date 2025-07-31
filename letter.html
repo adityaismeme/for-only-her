@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter 💌</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: radial-gradient(circle at top left, #ffe4e1, #fff0f5);
+      overflow-x: hidden;
+      overflow-y: auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .letter-container {
+      max-width: 850px;
+      margin: 8vh auto;
+      background: #ffffffeb;
+      border-radius: 25px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Sacramento', cursive;
+      font-size: 3.5rem;
+      color: #d81b60;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #4a148c;
+      text-align: left;
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #880e4f;
+      font-size: 1.1rem;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .couple-photo {
+      width: 60%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 20px;
+      margin: 25px auto 35px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      display: block;
+      animation: fadeInZoom 1.3s ease-in-out;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: #ff5ca2;
+      transform: rotate(45deg);
+      animation: floatUp 8s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff5ca2;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInZoom {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .letter-container {
+        padding: 2rem 1.5rem;
+        margin: 4vh 1rem;
+      }
+
+      .signature {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts"></div>
+  <div class="letter-container">
+    <h1>My Love Letter to You 💌</h1>
+    <img src="us-together.png" alt="Us together" class="couple-photo">
+
+    <p>Hi love,</p>
+    <p>It's an apology — about earlier, the girlfriend things. I just came to know today is Girlfriend Day so I thought to write in that way to you. I know it was too forward and uncomfortable for you, I'm sorry. I was just overwhelmed, I'm sorry.</p>
+    <p>I know very well that you're not my girlfriend (yet), and I should have been more thoughtful with my words. I understand that feelings should be expressed with respect, not assumption.</p>
+    <p>You're someone I deeply admire — for who you are, the way you carry yourself, and the light you carry even when things are hard. And I guess sometimes, my heart races ahead while my role in your life is still growing — slowly, patiently.</p>
+    <p>I don’t expect anything in return. I just want you to feel safe, respected, and never pressured. That’s the kind of love I believe in — the one that waits, listens, and protects.</p>
+    <p>Again, I’m sorry. Please ignore this if you don’t like or found it too straightforward. But... read below, I have a love letter for you.</p>
+
+    <p>Hiii, since you're reading this hehe, the very first thing — "I LOVE YOU."</p>
+    <p>Idk if I have the right words, but I do know I have the right heart. And that heart has quietly but deeply fallen for you.</p>
+
+    <p>I love you:
+    <br>— The way you speak.
+    <br>— The way you carry your faith.
+    <br>— The way you feel deeply and yet stay strong.
+    <br>— The way you don’t even realize how much light you bring into my world.</p>
+
+    <p>You don’t need to be perfect to be loved deeply. Come to me with your messy hair, morning face, tired eyes, blank mind — all the things you call insecurities — and I’ll show you the kind of love that loves you unconditionally.</p>
+
+    <p>You are worthy. Of peace. Of joy. Of being loved as you are.
+    <br>And if someday, your heart decides to let someone in…
+    <br>I’ll be right here — with steady hands, a loyal heart, and a love that already sees you, all of you, and still chooses you fully.</p>
+
+    <p>I don’t love you with expectation.
+    <br>I don’t love you with pressure.
+    <br>I love you with patience.
+    <br>With respect.
+    <br>With hope — that maybe someday, you’ll see me the way I already see you.</p>
+
+    <p>But if that day never comes, that’s okay too. Because knowing you, caring for you, and loving you even in silence — that’s already a kind of happiness I never thought I’d find.</p>
+
+    <p class="signature">With all that I am,<br>Aditya Kashyap</p>
+  </div>
+
+  <script>
+    const heartsContainer = document.querySelector('.hearts');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
