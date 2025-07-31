@@ -1,166 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Voucher 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, Mahal Ko</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Quicksand:wght@400;600&display=swap');
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: radial-gradient(circle at top left, #ffe4e1, #fff0f5);
-      overflow-x: hidden;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: 8vh auto;
-      background: #ffffffda;
-      border-radius: 25px;
-      padding: 3rem 2rem;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-      z-index: 2;
-      position: relative;
-    }
-
-    h1 {
-      font-family: 'Sacramento', cursive;
-      font-size: 3.2rem;
-      color: #d81b60;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #4a148c;
-      margin-bottom: 1.4rem;
-      line-height: 1.8;
-    }
-
-    .btn {
-      background-color: #d81b60;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-top: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #ad1457;
-      transform: scale(1.05);
-    }
-
-    .hearts {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .heart {
-      position: absolute;
-      bottom: -30px;
-      width: 20px;
-      height: 20px;
-      background: #ff5ca2;
-      transform: rotate(45deg);
-      animation: floatUp 7s infinite ease-in;
-    }
-
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: #ff5ca2;
-      border-radius: 50%;
-    }
-
-    .heart::before {
-      top: -10px;
-      left: 0;
-    }
-
-    .heart::after {
-      left: -10px;
-      top: 0;
-    }
-
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0) rotate(45deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) rotate(45deg);
-        opacity: 0;
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      h1 {
-        font-size: 2.4rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .container {
-        padding: 2rem 1.5rem;
-        margin: 5vh 1rem;
-      }
-    }
-  </style>
 </head>
-<body>
-  <div class="hearts"></div>
-
+<body class="hearts-background">
   <div class="container">
-    <h1>🌷 Your Voucher 🌷</h1>
-    <p>You’ve been officially handpicked by the universe (and by me hehe) to receive a rare and magical <strong>Girlfriend Experience Voucher</strong>, valid for the one and only you.</p>
-    <p>📍 Location: Between our hearts, always<br>
-       🕖 Time: Anytime, August 1, 2025<br>
-       💑 With: A man hopelessly in love with you<br>
-       👗 Dress Code: Just come as you are — that’s perfection already</p>
-    <p>🎁 What's Included:<br>
-       💌 One heartfelt letter<br>
-       🤗 Infinite hugssssssssss<br>
-       💞 Unlimited forehead kisses (virtual, for now)<br>
-       📜 Validity: Forever. This love never expires</p>
-    <button class="btn" onclick="window.location.href='letter.html'">Open Your Letter 💌</button>
+    <h1>🌸 Hello Mahal Ko 🌸</h1>
+    <p>You’ve been officially handpicked by the universe (and by me too hehe) to receive this rare and precious <strong>Girlfriend Experience Voucher</strong>, valid only for the most beautiful soul I’ve ever known.</p>
+    <p>🕖 Time: Anytime, August 1, 2025<br />
+    📍 Location: Somewhere between our hearts, connected across miles<br />
+    💑 With: The man hopelessly in love with you, no matter the distance<br />
+    👗 Dress Code: Just show up as you — that’s already perfection to me</p>
+    <p>🎁 What's Included:<br />
+    - One heartfelt letter<br />
+    - Infinite hugssssssssss<br />
+    - Infinite love, and unlimited forehead kisses (virtual for now, real soon)<br />
+    📜 Validity: sorry but this love comes with no expiration.</p>
+   <button class="btn" onclick="window.location.href='voucher.html'">
+  Click to Open Your Surprise 🎁
+</button>
   </div>
-
-  <script>
-    const heartsContainer = document.querySelector('.hearts');
-
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = 5 + Math.random() * 5 + "s";
-      heartsContainer.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 10000);
-    }
-
-    setInterval(createHeart, 300);
-  </script>
+  
+  <script src="hearts.js"></script>
 </body>
 </html>
